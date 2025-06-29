@@ -1,0 +1,1053 @@
+/* Stack : Layout où l'espace vertical entre chaque enfant est consistant */
+/* Usage : ajouter la classe "stack" sur un élément parent et modifier les variables si nécessaire */
+/* Ajouter data-gap="" pour modifier l'espacement */
+/* Source et exemple : https://codepen.io/alsacreations/pen/XWPmKXy */
+
+.stack {
+  --stack-gap: 1rem; /* espace entre chaque enfant */ 
+  
+  display: grid;
+  row-gap: var(--stack-gap);
+  
+  &[data-gap="l"] {
+    row-gap: calc(var(--stack-gap) * 2);
+  }
+  
+  &[data-gap="xl"] {
+    row-gap: calc(var(--stack-gap) * 3);
+  }
+}
+
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+
+.stack>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+.cluster {
+  --cluster-gap: 1rem; /* gouttière */
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap);
+  align-items: start;
+  
+  &[data-gap="l"] {
+    gap: calc(var(--cluster-gap) * 2);
+  }
+  
+  &[gap="xl"] {
+    gap: calc(var(--cluster-gap) * 3);
+  }
+  
+  &[data-justify="end"] {
+    justify-content: end;
+  }
+  
+  &[data-align="start"] {
+    align-items: start;
+  }
+  
+  &[data-align="center"] {
+    align-items: center;
+  }
+  
+  &[data-align="stretch"] {
+    align-items: stretch;
+  }
+}
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+.cluster {
+  margin-bottom: 1rem;
+  border: 1px dotted #ccc;
+}
+.cluster>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+/* Autogrid : Layout de grille automatique et flexible. Le nombre de colonnes dépend de leur taille minimale allouée. Les colonnes sont fluides avec une largeur minimale mais jamais supérieure à 100% du parent. */
+/* Usage : ajouter la classe "autogrid" sur un élément parent et modifier les variables si nécessaire */
+/* Source et exemple : https://codepen.io/alsacreations/pen/MWBporV */
+
+.autogrid {
+  --autogrid-gap: 1rem; /* gouttière */
+  --col-min-size: 20rem; /* taille mini de chaque colonne */
+  --grid-fill: auto-fit; /* mode de remplissage */
+  
+  display: grid;
+  grid-template-columns: repeat(var(--grid-fill), minmax(min(var(--col-min-size), 100%), 1fr));
+  gap: var(--autogrid-gap);
+  
+  &[data-gap="l"] {
+    gap: calc(var(--autogrid-gap) * 2);
+  }
+  
+  &[data-gap="xl"] {
+    gap: calc(var(--autogrid-gap) * 3);
+  }
+  
+  &[data-align="start"] {
+    align-content: start;
+    align-items: start;
+  }
+}
+
+/* DECO */
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+}
+.autogrid {
+  border: 1px dotted #ccc;
+}
+.autogrid>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+/* Keep aspect-ratio */
+*:where(iframe,
+  img,
+  input,
+  select,
+  textarea) {
+  height: auto;
+}
+
+/* Give links default styles */
+:where(a:not([class])) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+:where(input,
+  button,
+  textarea,
+  select) {
+  font: inherit;
+}
+
+/* Styles for tables */
+:where(table) {
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+/* Remove border on images and iframes */
+:where(img,
+  iframe) {
+  border-style: none;
+}
+
+/* Fill color matching to text color */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Remove all animations on demand */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Switcher : Layout composé d'enfants de même largeur s'affichant horizontalement ou sur une colonne selon la taille disponible au sein du parent. */
+/* Usage : ajouter la classe "switcher" sur un élément parent et modifier les variables si nécessaire */
+/* Sources et exemples : https://codepen.io/alsacreations/pen/qByrjpG?editors=1100 */
+
+.switcher {
+  --switcher-gap: 1rem;
+
+  display: grid;
+  gap: var(--switcher-gap);
+  
+  &[data-gap="l"] {
+    gap: calc(var(--switcher-gap) * 2);
+  }
+  
+  &[data-gap="xl"] {
+    gap: calc(var(--switcher-gap) * 3);
+  }
+  
+  &[data-align="start"] {
+    align-content: start;
+    align-items: start;
+  }
+
+  /* Multi colonnes si >768px */
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr))
+  }
+}
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+.switcher {
+  margin-bottom: 1rem;
+  border: 1px dotted #ccc;
+}
+.switcher>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+/* Keep aspect-ratio */
+*:where(iframe,
+  img,
+  input,
+  select,
+  textarea) {
+  height: auto;
+}
+
+/* Give links default styles */
+:where(a:not([class])) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+:where(input,
+  button,
+  textarea,
+  select) {
+  font: inherit;
+}
+
+/* Styles for tables */
+:where(table) {
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+/* Remove border on images and iframes */
+:where(img,
+  iframe) {
+  border-style: none;
+}
+
+/* Fill color matching to text color */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Remove all animations on demand */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Repel : Layout composé de deux enfants disposés de part et d'autre dans leur parent tant que l'espace le permet. */
+/* Usage : ajouter la classe "repel" sur un élément parent et modifier les variables si nécessaire */
+/* Source et exemple : https://codepen.io/alsacreations/pen/zYLZzPm?editors=1100 */
+
+.repel {
+  --repel-gap: 1rem; /* gouttière */
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--repel-gap);
+  
+  &[data-gap="l"] {
+    gap: calc(var(--repel-gap) * 2);
+  }
+  
+  &[data-gap="xl"] {
+    gap: calc(var(--repel-gap) * 3);
+  }
+  
+  &[data-align="start"] {
+    align-items: start;
+  }
+  
+  &[data-align="center"] {
+    align-items: center;
+  }
+  
+  &[data-align="stretch"] {
+    align-items: stretch;
+  }
+}
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+.repel {
+  border: 1px dotted #ccc;
+}
+.repel>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+/* Keep aspect-ratio */
+*:where(iframe,
+  img,
+  input,
+  select,
+  textarea) {
+  height: auto;
+}
+
+/* Give links default styles */
+:where(a:not([class])) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+:where(input,
+  button,
+  textarea,
+  select) {
+  font: inherit;
+}
+
+/* Styles for tables */
+:where(table) {
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+/* Remove border on images and iframes */
+:where(img,
+  iframe) {
+  border-style: none;
+}
+
+/* Fill color matching to text color */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Remove all animations on demand */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reel : Layout scrollable horizontalement avec snap-points. */
+/* Usage : ajouter la classe "reel" sur un élément parent et modifier les variables si nécessaire, ajouter un attribut HTML data-scroll pour les options */
+/* Source et exemple : https://codepen.io/alsacreations/pen/vYaxZWE?editors=1100 */
+
+.reel {
+  --reel-gap: 1rem; /* gouttière */
+  --item-size: 35%; /* largeur des enfants (% du conteneur) */
+
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto; /* reel est centré horizontalement */
+  overflow-x: auto;
+  gap: var(--reel-gap);
+  scroll-snap-type: x mandatory; /* scroll-snap sur l'axe x */
+  -webkit-overflow-scrolling: touch;
+
+  &[data-gap="l"] {
+    gap: calc(var(--reel-gap) * 2);
+  }
+
+  &[data-gap="xl"] {
+    gap: calc(var(--reel-gap) * 3);
+  }
+
+  :where(& > *) {
+    flex-basis: var(--item-size);
+    flex-shrink: 0;
+  }
+
+  &[data-scroll="start"] > * {
+    scroll-snap-align: start; /* je cale à gauche */
+  }
+
+  &[data-scroll="center"] > * {
+    scroll-snap-align: center; /* je cale au centre */
+  }
+
+  &[data-scroll="end"] > * {
+    scroll-snap-align: end; /* je cale à droite */
+  }
+
+  &[data-scrollbar="hidden"] {
+    scrollbar-width: none; /* je masque l'ascenseur */
+
+    &::-webkit-scrollbar {
+      display: none; /* je masque l'ascenseur sur webkit */
+    }
+  }
+}
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+.reel {
+  border: 1px dotted #ccc;
+}
+.reel>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Duo : Layout de deux enfants horizontaux avec un rapport de 2/3 et 1/3 par défaut. */
+/* Usage : ajouter la classe "duo" sur un élément parent et modifier les variables si nécessaire */
+/* Source et exemple : https://codepen.io/alsacreations/pen/eYjvRGK */
+
+.duo {
+  --duo-gap: 1rem;
+
+  display: grid;
+  align-content: start;
+  gap: var(--duo-gap);
+  
+  &[data-gap="l"] {
+    gap: calc(var(--duo-gap) * 2);
+  }
+  
+  &[data-gap="xl"] {
+    gap: calc(var(--duo-gap) * 3);
+  }
+  
+  &[data-align="start"] {
+    align-content: start;
+    align-items: start;
+  }
+  
+  &[data-align="center"] {
+    align-content: center;
+    align-items: center;
+  }
+  
+  &[data-align="stretch"] {
+    align-content: stretch;
+  }
+
+  /* Deux colonnes si >=768px */
+  @media (width >= 48rem) {
+    /* modèle par défaut = 2/3 1/3 */
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    
+    &[data-model="1-2"] {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+    
+    &[data-model="3-1"] {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    }
+    
+    &[data-model="1-3"] {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    }
+
+    /* "auto" = taille initiale conservée */
+    &[data-model="auto-1"] {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+    
+    &[data-model="1-auto"] {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+  }
+}
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+.duo {
+  margin-bottom: 1rem;
+  border: 1px dotted #ccc;
+}
+.duo>* {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+    HTML CSS 
+
+    Result
+    Skip Results Iframe
+
+EDIT ON
+
+/* Boxed : Layout centré horizontalement avec une largeur maximale définie. */
+/* Usage : ajouter la classe "boxed" sur un élément parent et modifier les variables si nécessaire */
+/* Source et exemple : https://codepen.io/alsacreations/pen/jEPJGJZ */
+
+/* Boxed */
+.boxed {
+  --boxed-max: 80rem; /* Largeur max (1280px) */
+
+  width: 100%;
+  max-width: var(--boxed-max, 80rem);
+  margin-inline: auto;
+  
+  &[data-boxed="small"] {
+    --boxed-max: 64rem; /* 1024px */
+  }
+}
+
+
+/* DECO */
+
+body {
+  margin: 2rem;
+  font-family: system-ui, sans-serif;
+}
+
+.boxed {
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  
+  & + .boxed {
+    margin-top: 1rem;
+  }
+}
+
+
+
+/* RESET */
+/*
+ * Switch to border-box model for all elements
+ * Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Break words to prevent overflows */
+html {
+  overflow-wrap: break-word;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove default margin and padding */
+*:where(body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+*:where(ol,
+  ul) {
+  list-style: none;
+}
+
+/* Prevent elements to exceed their container */
+*:where(img,
+  table,
+  td,
+  blockquote,
+  pre,
+  code,
+  input,
+  textarea,
+  select,
+  video,
+  svg,
+  iframe) {
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
