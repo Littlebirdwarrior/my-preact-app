@@ -1,18 +1,20 @@
-import { useLocation } from 'preact-iso';
+// src/components/Header.jsx
 
-export function Header() {
-	const { url } = useLocation();
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="container">
+        <h1 className="logo">Camille Dorland</h1>
+        <nav>
+          <ul className="nav-list">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#carousel">Projets</a></li>
+            <li><a href="#playground">Playground</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
-	return (
-		<header>
-			<nav>
-				<a href="/" class={url == '/' && 'active'}>
-					Home
-				</a>
-				<a href="/404" class={url == '/404' && 'active'}>
-					404
-				</a>
-			</nav>
-		</header>
-	);
-}
+export { Header };
