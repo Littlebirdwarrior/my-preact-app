@@ -1,15 +1,39 @@
-# `create-preact`
+# 🌐 Portfolio – Single Page App en Preact
 
-<h2 align="center">
-  <img height="256" width="256" src="./src/assets/preact.svg">
-</h2>
+Bienvenue dans ce petit projet personnel de portfolio réalisé avec [Preact](https://preactjs.com/), une alternative légère à React. Cette Single Page App a été conçue pour expérimenter des interactions modernes tout en maintenant des performances optimales.
 
-<h3 align="center">Get started using Preact and Vite!</h3>
+## ✨ Objectifs
 
-## Getting Started
+- Créer un site portfolio responsive et fluide
+- Utiliser Preact et les hooks pour la structure et l'interactivité
+- Expérimenter des effets visuels basés sur les mouvements de souris
+- Garder une architecture claire et maintenable
 
--   `pnpm dev` - Starts a dev server at http://localhost:5173/
+## 📐 Structure du site
 
--   `pnpm build` - Builds for production, emitting to `dist/`
+Le site est divisé en 4 sections principales :
 
--   `pnpm preview` - Starts a server at http://localhost:4173/ to test production build locally
+- **Header** : Barre de navigation simple
+- **Hero** : Section d’accroche avec image ou message fort
+- **Carrousel** : Affiche 3 projets ou contenus défilants
+- **Playground** : Espace ludique avec animation suivant le mouvement de la souris
+
+## 🛠️ Technologies utilisées
+
+- ⚛️ [Preact](https://preactjs.com/)
+- 🧠 Hooks (`useState`, `useEffect`, `useRef`)
+- 🎨 CSS (ou Tailwind / Sass si tu veux l'ajouter)
+- ⚡ [Vite](https://vitejs.dev/) pour le bundling ultra-rapide
+
+## 🚀 Lancer le projet
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/ton-pseudo/ton-repo.git
+cd ton-repo
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
