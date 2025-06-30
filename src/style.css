@@ -1,9 +1,14 @@
 @import './css/reset.css';
 @import './css/pretzel.css';
+@import './css/root.css';
 @import './css/header.css';
+@import './css/main.css';
 
 body {
     margin: 0;
-    background: var(--brouillard);
+        background: linear-gradient(
+        var(--brouillard) 10%,
+        #000 60%
+    );
     color: var(--ciel);
 }
