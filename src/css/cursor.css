@@ -2,7 +2,7 @@
     --regular-color: var(--turquoise);
     --hover-color: var(--white);
     --transparent: #26959326;
-    --hover-transparent: #ffffff35;
+    --hover-transparent: #ffffff30;
     --big-cursor-size: 3rem;
     --transition-duration: .5s;
 }
@@ -35,8 +35,11 @@
     border-color: var(--hover-color);
 }
 
-.custom-cursor.cursor-hover.inner-circle {
+.custom-cursor.cursor-hover .inner-circle {
     background: transparent;
-    background: var(--hover-color);
+}
 
+.custom-cursor.cursor-hidden {
+  opacity: 0;
+  pointer-events: none;
 }

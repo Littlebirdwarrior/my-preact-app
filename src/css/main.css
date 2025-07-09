@@ -28,5 +28,4 @@ main {
     position: fixed;
     z-index: -1;
     pointer-events: none;
-    /* Les propriétés left, top, transform sont gérées en JS */
 }
