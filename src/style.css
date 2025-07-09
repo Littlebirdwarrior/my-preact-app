@@ -3,6 +3,7 @@
 @import './css/root.css';
 @import './css/header.css';
 @import './css/main.css';
+@import './css/cursor.css';
 
 body {
     margin: 0;
@@ -10,4 +11,5 @@ body {
     color: var(--ciel);
     cursor: none;
 }
+
 

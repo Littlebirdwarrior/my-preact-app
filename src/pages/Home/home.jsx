@@ -1,6 +1,11 @@
-import { Hero } from '../../components/Hero.jsx'; // Import du composant Hero avec une tilde
+import { Hero, Cursor } from '../../components/Hero.jsx'; // Import des deux composants
 
 export function Home() {
-  // Affiche le composant Hero
-  return <Hero />;
+  // Affiche le curseur custom et le composant Hero
+  return (
+    <>
+      <Cursor />
+      <Hero />
+    </>
+  );
 }

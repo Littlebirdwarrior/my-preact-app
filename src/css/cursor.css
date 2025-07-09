@@ -1,0 +1,29 @@
+
+.custom-cursor {
+  width: 70px;
+  height: 70px;
+  background-color: var(--canard);
+  border: 0px solid var(--black);
+  box-shadow: 0px 0px 0px var(--black);
+}
+
+.custom-cursor .inner-circle {
+  width: 20%;
+  height: 20%;
+  background-color: var(--brouillard);
+}
+
+.hover-target:hover .custom-cursor, a:hover .custom-cursor, button:hover .custom-cursor, input[type="button"]:hover .custom-cursor, input[type="submit"]:hover .custom-cursor {
+  width: 12px;
+  height: 12px;
+  background-color: var(--canard);
+  border: 0px solid var(--black);
+  box-shadow: 0px 0px 0px var(--black);
+}
+
+.hover-target:hover .custom-cursor .inner-circle, a:hover .custom-cursor .inner-circle, button:hover .custom-cursor .inner-circle, input[type="button"]:hover .custom-cursor .inner-circle, input[type="submit"]:hover .custom-cursor .inner-circle {
+  width: 0%;
+  height: 0%;
+  background-color: var(--black);
+}
+

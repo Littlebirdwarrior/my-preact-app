@@ -1,7 +1,7 @@
 /**
  * Composant Home : page d'accueil du portfolio
  */
- import { useMousePosition } from '../hooks/useMousePosition.js'; // Import du hook
+import { useMousePosition } from '../hooks/useMousePosition.js'; // Import du hook
 
 export function Hero() {
   // Récupère la position de la souris
