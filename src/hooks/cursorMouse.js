@@ -1,28 +1,26 @@
-import { useEffect } from "preact/hooks";
+import { useEffect } from "preact/hooks"; // Importe le hook useEffect de Preact
 
 // Hook personnalisé pour gérer un curseur custom
 export function useCustomCursor() {
-    useEffect(() => {
-        // Récupère l'élément du DOM qui sert de curseur personnalisé
-        const customCursor = document.getElementById("custom-cursor");
-        if (!customCursor) return;
-
-        console.log(" bazinga 1");
+    useEffect(() => { // Exécute ce bloc au montage du composant
+        // Récupère l'élément du DOM qui sert de curseur personnalisé (par classe)
+        const customCursor = document.querySelector(".custom-cursor");
+        if (!customCursor) return; // Si l'élément n'existe pas, on arrête le hook
 
         // Fonction pour déplacer le curseur personnalisé à la position de la souris
-        // avec evenement handlerMouseMove lié à mousemove, JS natif
-        const handleMouseMove = (e) => { 
-            const cursorSize = customCursor.clientWidth / 2;
-            // injecte la div en lui assignant la position de la souris
-            customCursor.style.left = `${e.clientX - cursorSize}px`; 
+        const handleMouseMove = (e) => {
+            const cursorSize = customCursor.clientWidth / 2; // clientWidth retourne la largeur de l'élément
+            // injecte le style sur ma div custom-cursor et place à la position de la souris
+            customCursor.style.left = `${e.clientX - cursorSize}px`;
             customCursor.style.top = `${e.clientY - cursorSize}px`;
         };
 
-        // Ajoute une classe CSS quand la souris survole certains éléments (effet hover)
-        const handleMouseEnter = () => customCursor.classList.add("custom-cursor ");
-        const handleMouseLeave = () => customCursor.classList.remove("custom-cursor ");
+        // ajoute et retire la classe 'hover' au curseur custom lors du survol d'un élément interactif
+        // handleMouseMove est une fonction qui sera appelée à chaque mouvement de souris
+        const handleMouseEnter = () => customCursor.classList.add("cursor-hover");
+        const handleMouseLeave = () => customCursor.classList.remove("cursor-hover");
 
-        // Ajoute l'écouteur global pour déplacer le curseur personnalisé
+        // Ajoute l'écouteur global pour déplacer le curseur personnalisé à chaque mouvement de souris
         document.addEventListener("mousemove", handleMouseMove);
 
         // Sélectionne tous les éléments interactifs à survoler (liens, boutons, etc.)
@@ -31,17 +29,17 @@ export function useCustomCursor() {
         );
         // Ajoute les écouteurs pour l'effet hover sur chaque cible
         hoverTargets.forEach((target) => {
-            target.addEventListener("mouseenter", handleMouseEnter);
-            target.addEventListener("mouseleave", handleMouseLeave);
+            target.addEventListener("mouseenter", handleMouseEnter); // Ajoute la classe 'hover' au curseur custom
+            target.addEventListener("mouseleave", handleMouseLeave); // Retire la classe 'hover' au curseur custom
         });
 
         // Nettoyage lors du démontage du composant ou du hook
         return () => {
-            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mousemove", handleMouseMove); // Retire l'écouteur de mouvement de souris
             hoverTargets.forEach((target) => {
-                target.removeEventListener("mouseenter", handleMouseEnter);
-                target.removeEventListener("mouseleave", handleMouseLeave);
+                target.removeEventListener("mouseenter", handleMouseEnter); // Retire l'écouteur mouseenter
+                target.removeEventListener("mouseleave", handleMouseLeave); // Retire l'écouteur mouseleave
             });
         };
-    }, []);
+    }, []); // Le tableau vide [] signifie que l'effet ne s'exécute qu'une fois au montage/démontage
 }

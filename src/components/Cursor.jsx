@@ -5,8 +5,8 @@ import { useCustomCursor } from '../hooks/cursorMouse.js';
 export function Cursor() {
   useCustomCursor(); // Active le comportement du curseur custom
   return (
-    <div className="custom-cursor" id="custom-cursor">
-      <div className="inner-circle" id="inner-circle"></div>
+    <div className="custom-cursor">
+      <div className="inner-circle"></div>
     </div>
   );
 }

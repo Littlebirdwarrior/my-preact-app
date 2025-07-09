@@ -1,29 +1,42 @@
+:root {
+    --regular-color: var(--turquoise);
+    --hover-color: var(--white);
+    --transparent: #26959326;
+    --hover-transparent: #ffffff35;
+    --big-cursor-size: 3rem;
+    --transition-duration: .5s;
+}
 
 .custom-cursor {
-  width: 70px;
-  height: 70px;
-  background-color: var(--canard);
-  border: 0px solid var(--black);
-  box-shadow: 0px 0px 0px var(--black);
+    position: fixed;
+    width: var(--big-cursor-size);
+    aspect-ratio: 1 / 1;
+    background: var(--transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    transition: width var(--transition-duration), height var(--transition-duration), background var(--transition-duration), border-color var(--transition-duration);
+    border: solid 1px var(--regular-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .custom-cursor .inner-circle {
-  width: 20%;
-  height: 20%;
-  background-color: var(--brouillard);
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    background: var(--regular-color);
+    border-radius: 50%;
+    transition: width var(--transition-duration), height var(--transition-duration), background var(--transition-duration), border-color var(--transition-duration);
 }
 
-.hover-target:hover .custom-cursor, a:hover .custom-cursor, button:hover .custom-cursor, input[type="button"]:hover .custom-cursor, input[type="submit"]:hover .custom-cursor {
-  width: 12px;
-  height: 12px;
-  background-color: var(--canard);
-  border: 0px solid var(--black);
-  box-shadow: 0px 0px 0px var(--black);
+.custom-cursor.cursor-hover {
+    background: var(--hover-transparent);
+    border-color: var(--hover-color);
 }
 
-.hover-target:hover .custom-cursor .inner-circle, a:hover .custom-cursor .inner-circle, button:hover .custom-cursor .inner-circle, input[type="button"]:hover .custom-cursor .inner-circle, input[type="submit"]:hover .custom-cursor .inner-circle {
-  width: 0%;
-  height: 0%;
-  background-color: var(--black);
-}
+.custom-cursor.cursor-hover.inner-circle {
+    background: transparent;
+    background: var(--hover-color);
 
+}
