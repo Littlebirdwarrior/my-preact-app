@@ -1,32 +1,32 @@
 export const carouselItems = [
   {
     title: "Titre 1",
-    description: "Description 1",
+    description: "Captain. Yes, sir? Tell them we wish to board at once. With all due respect, the Ambassadors for the Supreme Chancellor wish to board immediately. Yes, yes, of course, as you know, our blockade is perfectly legal, and we'd be happy to receive the Ambassador.A vergence, you say? Located around a person? A boy. his cells have the highest concentration of midi-chlorians I have ever seen in a life form.",
     image: "https://placekittens.com/g/200/200"
   },
   {
     title: "Titre 2",
-    description: "Description 2",
+    description: "It is possible he was conceived by the midi-chlorians. You're referring to the prophesy of the one who will bring balance to the Force. It appears to be made up of primitives. This will work to our advantage. I have your approval to proceed then, My Lord. Wipe them out. Republic credits?!? Republic credits are no good out here. I need something more real. I don't have anything else. But credits will do fine. We are your humble servants, Our fate is in your hands. Yousa no tinken yousa greater den da Gungans.. Mesa like dis. Maybe wesa bein friends, we've sent out patrols.",
     image: "https://placekittens.com/g/200/200"
   },
   {
     title: "Titre 3",
-    description: "Description 2",
+    description: "Senator, we're making our final approach into Coruscant. Very good, Lieutenant. We made it. I guess I was wrong. I'm Captain Typho of Her Majesty's security service. Queen Jamillia has been informed of your assignment. I am grateful you are here, Master Kenobi. The situation is more dangerous than the senator will admit. I don't need more security. I need answers. This had nothing to do with me, I assure you. ",
     image: "https://placekittens.com/g/200/200"
   },
   {
     title: "Titre 4",
-    description: "Description 2",
+    description: "I will petition immediately to have you set free. Well, I hope it doesn't take too long. I have work to do.Retransmit this message to Coruscate. I brought you something. Are you hungry? The shifter broke. Life seems so much simpler when you're fixing things. So you might say that we are encouraged to love. You've changed so much. Ah, you haven't changed a bit. You're exactly the way I remember you in my dreams. Reach out. Sense the Force around you. Use your feelings you must.",
     image: "https://placekittens.com/g/200/200"
   },
   {
     title: "Titre 5",
-    description: "Description 2",
+    description: "Lock on to him, R2. Master, General Grievous's ship is directly ahead Master, General Grievous's ship is directly ahead the one crawling with vulture droids. I see it. Oh, this is going to be easy. I take it General Grievous has been destroyed then. I must say you're here sooner than expected. In the name of the Galactic Senate of the Republic, you're under arrest, Chancellor. Are you threatening me, Master Jedi? The senate will decide your fate.",
     image: "https://placekittens.com/g/200/200"
   },
   {
     title: "Titre 6",
-    description: "Description 2",
+    description: "I am the senate. Not yet. It's treason then. Your new empire? Don't make me kill you. Anakin, my allegiance is to the Republic, to democracy! If you're not with me, then you're my enemy. Only a Sith deals in absolutes. I will do what I must. You will try. I hear a new apprentice you have, Emperor. Or should I call you Darth Sidious? Master Yoda. I must go, Master. No. If what you've told me is true, you will have gained my trust. But for now, remain here. Reversing stabilizers. Magnetize! Magnetize! Fire the emergency booster engines. We're leveling out, sir. Easy. R2, locate the chancellor. The chancellor's signal is coming from right there the observation platform at the top of that spire. I sense Count Dooku. I sense a trap. Next move? Spring the trap.",
     image: "https://placekittens.com/g/200/200"
   },
 ];
