@@ -21,9 +21,9 @@ main {
 }
 
 .cursor-follow {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(var(--canard) 10%, var(--brouillard) 60%, transparent);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(var(--jaquet) 10%, var(--brouillard) 60%, transparent);
     border-radius: 50%;
     position: fixed;
     z-index: -1;

@@ -6,9 +6,8 @@
 
 body {
     margin: 0;
-        background: linear-gradient(
-        var(--brouillard) 10%,
-        #000 60%
-    );
+    background: var(--brouillard);
     color: var(--ciel);
+    cursor: none;
 }
+
