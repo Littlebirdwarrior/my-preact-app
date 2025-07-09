@@ -1,4 +1,6 @@
 import { Hero } from '../../components/Hero.jsx'; 
+import { Carousel } from '../../components/Carousel.jsx';
+import { carouselItems } from '../../data/carouselData.js';
 
 
 export function Home() {
@@ -6,6 +8,7 @@ export function Home() {
   return (
     <>
       <Hero />
+      <Carousel items={carouselItems} />
     </>
   );
 }
