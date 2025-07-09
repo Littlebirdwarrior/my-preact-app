@@ -3,7 +3,11 @@
 @import './css/root.css';
 @import './css/cursor.css';
 @import './css/header.css';
-@import './css/main.css';
+@import './css/hero.css';
+
+/* Pages styles */
+
+@import './pages/Home/home.css';
 
 body {
     margin: 0;

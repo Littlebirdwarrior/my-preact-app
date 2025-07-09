@@ -9,9 +9,8 @@ export function Hero() {
 
   // Affiche le logo, un titre, une description et un bouton
   return (
-    <div className="home-container no-cursor">
+    <div className="home-container">
       <h1 className="h1">Bienvenue</h1>
-      {/* Div qui suit la souris */}
       <div
         className="cursor-follow"
         style={{

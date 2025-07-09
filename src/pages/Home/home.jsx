@@ -7,8 +7,12 @@ export function Home() {
   // Affiche le curseur custom et le composant Hero
   return (
     <>
+    <section class="no-cursor">
       <Hero />
+    </section>
+    <section>
       <Carousel items={carouselItems} />
+    </section>
     </>
   );
 }
