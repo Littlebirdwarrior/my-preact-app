@@ -1,6 +1,5 @@
 import { Hero } from '../../components/Hero.jsx'; 
 import { Carousel } from '../../components/Carousel.jsx';
-import { carouselItems } from '../../data/carouselData.js';
 
 
 export function Home() {
@@ -11,7 +10,7 @@ export function Home() {
       <Hero />
     </section>
     <section>
-      <Carousel items={carouselItems} />
+      <Carousel/>
     </section>
     </>
   );
