@@ -30,7 +30,7 @@ export function useCustomCursor() {
 
         // Sélectionne tous les éléments interactifs à survoler (liens, boutons, etc.)
         const hoverTargets = document.querySelectorAll(
-            'a, button, [role="button"], input[type="button"], input[type="submit"], .hover-target'
+            'a, button, [role="button"], input[type="button"], input[type="submit"], .hover-target, .nav-toogle'
         );
         // Ajoute les écouteurs pour l'effet hover sur chaque cible
         hoverTargets.forEach((target) => {

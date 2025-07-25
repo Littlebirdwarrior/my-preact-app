@@ -4,7 +4,8 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <h1 className="logo">Camille Dorland</h1>
-        <nav>
+        <span className="nav-toogle"></span>
+        <nav className="nav">
           <ul className="nav-list">
             <li><a href="#hero">Accueil</a></li>
             <li><a href="#carousel">Projets</a></li>
