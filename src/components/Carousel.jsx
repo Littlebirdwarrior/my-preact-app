@@ -15,8 +15,8 @@ const Item = ({ title, description, image }) => {
 
 // Fonction pour déterminer le nombre d'éléments visibles en fonction de la largeur de la fenêtre
 const getVisibleCount = (width) => {
-    if (width >= 768) return 3;
-    if (width >= 640) return 2;
+    if (width >= 1024) return 3;
+    if (width >= 768) return 2;
     return 1;
 };
 

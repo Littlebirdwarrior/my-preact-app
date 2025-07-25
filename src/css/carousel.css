@@ -11,60 +11,57 @@
   border-radius: var(--radius);
   border: solid 1px var(--brouillard);
   background-color: var(--opaque);
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .carousel {
   display: grid;
   gap: 2rem;
   overflow: hidden;
-  max-height: 400px;
   /*transition: transform 0.5s ease-in-out;*/
 }
 
-@media screen and (min-width: 640px) {
+@media (min-width: 786px) {
   .carousel {
     grid-template-columns: repeat(2, 1fr);
-    max-height: 600px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 1024px) {
   .carousel {
     grid-template-columns: repeat(3, 1fr);
-    max-height: fit-content;
   }
 }
 
 .carousel-item {
-  height: 400px;
+  max-height: 400px;
   border-radius: var(--radius);
   padding: 2rem;
   border: solid 1px var(--brouillard);
   background-color: var(--opaque);
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .carousel-item{
-    max-height: 600px;
+    max-height: 550px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .carousel-item{
-    max-height: fit-content;
+    max-height: 650px;
   }
 }
 
 .carousel-item img {
   width: 100%;
-  max-height: 100px;
+  max-height: 180px;
   object-fit: cover;
   object-position: center;
   border-radius: var(--radius);
 }
 
-@media screen and (min-width: 640px) {
+@media (min-width: 768px) {
   .carousel-item img{
     max-height: 200px;
   }
@@ -76,10 +73,23 @@
   font-weight: 600;
 }
 
+@media (min-width: 1045px) {
+  .carousel-item h3{
+    font-size: 2.5rem;
+  }
+  
+}
+
 .carousel-item p {
-  /*max-height: 45%;*/
+  max-height: 100px;
   overflow-y: scroll;
   cursor: initial;
+}
+
+@media (min-width: 768px) {
+  .carousel-item p{
+    max-height: 45%;
+  }
 }
 
 .carousel-controls {
@@ -101,7 +111,7 @@
   transition: transform 0.3s ease;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 786px) {
   .carousel-button {
     width: 2rem;
     height: 1rem;
