@@ -2,23 +2,27 @@ import { useEffect } from 'preact/hooks';
 
 export function useHeader() {
     useEffect(() => {
+
         const navElement = document.querySelector(".nav");
-        if (!navElement) return;
 
-        const handleMouseEnter = () => {
-            navElement.style.display = "block";
+        if (window.innerWidth >= 768){
+            navElement.classList.remove("hide");
+            navElement.classList.add("show");
+            return;
+        }
+        
+        const toggleElement = document.querySelector(".nav-toogle");
+        if (!navElement || !toggleElement) return;
+
+        const handleToggleClick = () => {
+            navElement.classList.toggle("hide");
+            navElement.classList.toggle("show");
         };
-        const handleMouseLeave = () => {
-            navElement.style.display = "none";
-        };
 
-        navElement.addEventListener('mouseenter', handleMouseEnter);
-        navElement.addEventListener('mouseleave', handleMouseLeave);
+        toggleElement.addEventListener('click', handleToggleClick);
 
-        // Nettoyage des écouteurs au démontage
         return () => {
-            navElement.removeEventListener('mouseenter', handleMouseEnter);
-            navElement.removeEventListener('mouseleave', handleMouseLeave);
+            toggleElement.removeEventListener('click', handleToggleClick);
         };
     }, []);
 }

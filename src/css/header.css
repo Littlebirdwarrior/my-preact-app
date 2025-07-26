@@ -16,6 +16,78 @@
 }
 
 .header .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  max-width: var(--max-width);
+  align-items: center;
+  margin-inline: auto;
+}
+
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.nav-toogle {
+  padding: .2rem;
+  margin: .2rem;
+  align-self: end;
+}
+
+
+.nav-toogle > span {
+  display: block;
+  order: 2;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--white);
+  position: relative;
+}
+
+.nav-toogle > span::before,
+.nav-toogle > span::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.nav-toogle >span::before {
+  top: -0.5rem;
+}
+.nav-toogle >span::after {
+  top: 0.5rem;
+}
+
+
+.nav {
+  width: 100%;
+  grid-column: 1/3;
+}
+
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list li {
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--brouillard);
+}
+
+
+@media (min-width: 768px) {
+
+  .header .container {
   display: flex;
   justify-content: space-between;
   max-width: var(--max-width);
@@ -23,18 +95,23 @@
   margin-inline: auto;
 }
 
-/* @media (max-width: 750px) {
-  .nav {
-    display: none;
-  }
-} */
+    .nav {
+      width: fit-content;
+    }
 
-@media (min-width: 750px) {
+    .nav-toogle {
+      display: none;
+    }
 
     .nav-list {
-    display: flex;
-    flex-direction: flex;
+    flex-direction: row;
     gap: 1rem;  
+    }
+
+    .nav-list li {
+      padding: 0.5rem;
+      width: fit-content;
+      background-color: transparent;
     }
 
     .nav-list li a::after {
@@ -53,32 +130,5 @@
         transform: scaleX(1);
         transform-origin: left;
     }
-}
-
-
-.nav-toogle {
-  display: block;
-  order: 2;
-  width: 2rem;
-  height: 2px;
-  background-color: var(--white);
-  position: relative;
-}
-
-.nav-toogle::before,
-.nav-toogle::after {
-  content: '';
-  position: absolute;
-  width: 2rem;
-  height: 2px;
-  background-color: var(--white);
-  transition: transform 0.3s ease;
-}
-
-.nav-toogle::before {
-  top: -0.5rem;
-}
-.nav-toogle::after {
-  top: 0.5rem;
 }
 
