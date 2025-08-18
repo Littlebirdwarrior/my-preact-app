@@ -2,7 +2,8 @@
 
 Bienvenue dans ce petit projet personnel de portfolio réalisé avec [Preact](https://preactjs.com/), une alternative légère à React. Cette Single Page App a été conçue pour expérimenter des interactions modernes tout en maintenant des performances optimales.
 
-![preview](<Capture d’écran 2025-08-18 à 14.05.21.png>)
+
+<img width="1439" height="790" alt="Capture d’écran 2025-08-18 à 14 05 21" src="https://github.com/user-attachments/assets/401c7ffd-e7f3-46ed-8408-80f53b625390" />
 
 ## ✨ Objectifs
 
@@ -20,7 +21,8 @@ Le site est divisé en 4 sections principales :
 - **Carrousel** : Affiche 3 projets ou contenus défilants (responsive)
 - **Playground** : Espace ludique avec animation suivant le mouvement de la souris
 
-![preview](<Capture d’écran 2025-08-18 à 14.05.37.png>)
+<img width="1439" height="790" alt="Capture d’écran 2025-08-18 à 14 05 37" src="https://github.com/user-attachments/assets/965066a6-3439-4667-b846-6307f2707011" />
+
 
 ## 🛠️ Technologies utilisées
 
