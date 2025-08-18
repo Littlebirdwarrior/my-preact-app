@@ -2,6 +2,8 @@
 
 Bienvenue dans ce petit projet personnel de portfolio réalisé avec [Preact](https://preactjs.com/), une alternative légère à React. Cette Single Page App a été conçue pour expérimenter des interactions modernes tout en maintenant des performances optimales.
 
+![preview](<Capture d’écran 2025-08-18 à 14.05.21.png>)
+
 ## ✨ Objectifs
 
 - Créer un site portfolio responsive et fluide
@@ -14,9 +16,11 @@ Bienvenue dans ce petit projet personnel de portfolio réalisé avec [Preact](ht
 Le site est divisé en 4 sections principales :
 
 - **Header** : Barre de navigation simple
-- **Hero** : Section d’accroche avec image ou message fort
-- **Carrousel** : Affiche 3 projets ou contenus défilants
+- **Hero** : Section d’accroche avec un curseur personnalisé
+- **Carrousel** : Affiche 3 projets ou contenus défilants (responsive)
 - **Playground** : Espace ludique avec animation suivant le mouvement de la souris
+
+![preview](<Capture d’écran 2025-08-18 à 14.05.37.png>)
 
 ## 🛠️ Technologies utilisées
 
