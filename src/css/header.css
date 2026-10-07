@@ -17,7 +17,7 @@
 
 .header .container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 2.5rem;
   grid-template-rows: auto auto;
   max-width: var(--max-width);
   align-items: center;
@@ -36,7 +36,6 @@
 .nav-toogle {
   padding: .2rem;
   margin: .2rem;
-  align-self: end;
 }
 
 
@@ -47,6 +46,7 @@
   height: 2px;
   background-color: var(--white);
   position: relative;
+  align-self: end;
 }
 
 .nav-toogle > span::before,
@@ -81,7 +81,6 @@
 .nav-list li {
   padding: 1rem;
   width: 100%;
-  background-color: var(--brouillard);
 }
 
 

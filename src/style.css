@@ -9,12 +9,3 @@
 /* Pages styles */
 
 @import './pages/Home/home.css';
-
-body {
-    margin: 0;
-    background: var(--brouillard);
-    color: var(--ciel);
-    cursor: none;
-}
-
-

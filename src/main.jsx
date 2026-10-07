@@ -22,4 +22,10 @@ export function App() {
 	);
 }
 
-render(<App />, document.getElementById('app'));
+const rootElement = document.getElementById('app');
+
+if (!rootElement) {
+	throw new Error("L'élément #app est introuvable dans le DOM.");
+}
+
+render(<App />, rootElement);
