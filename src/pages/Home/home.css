@@ -16,7 +16,7 @@ section {
 body {
     margin: 0;
     color: var(--ciel);
-    background: linear-gradient(-45deg, #293B40 0%, #355763 36.07%, #06696B 60.38%, #372E2D 100%);
+    background: linear-gradient(-45deg, #293B40 , #437a8e , #06496b, #372E2D 100%);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     cursor: none;

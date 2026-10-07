@@ -18,7 +18,7 @@
 .cursor-follow {
     width: 1000px;
     height: 1000px;
-    background: radial-gradient(#146267 3%, #146167df 8%, #146167ae 15%, #1461673e 35%, #14616720 50%, #14616700 75%, transparent);
+    background: radial-gradient(#00878e 3%, #00878e3f 50%, #00878e04 75%, transparent);
     border-radius: 50%;
     position: fixed;
     z-index: -1;
